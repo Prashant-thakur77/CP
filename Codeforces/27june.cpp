@@ -19,43 +19,15 @@ const int MOD = 1e9 + 7;
 void solve() {
     ll n,k;
     cin>>n>>k;
-    if(n<=k){
-        cout<<n<<endl;
-        return;
+    ll ans=0;
+    for(int i=1;i<=n;i<<=1){
+        ll take=min(k,n/i);
+        ans+=take;
+        n-=take*i;
     }
-    ll no=n/k;
-    ll cursum=0;
-    int no2=1;
-    int l=0;
-    while(no2<=no){
-        
-        if((1LL << l+1)-1>no){
-            break;
-
-
-        };
-        l++;
-        no2=pow(2,l)-1;
-        
-
-    }
-    ll popcount=0;
-    for(int i=0;i<k;i++){
-        if(cursum+no>=(1LL << l+1)-1){
-            popcount+=l+1;
-            cursum=cursum+no-((1LL << l+1)-1);
-        }
-        else{
-            popcount+=l;
-            cursum+=no-no2;
-
-        }
+    cout<<ans<<endl;
         
         
-
-
-    }
-    cout<<popcount<<endl;
     
 
     
