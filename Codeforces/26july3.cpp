@@ -26,10 +26,10 @@ void solve() {
     int ans=0;
     for(int i=n;i>=1;i--){         
         int pos=1;                        
-        for (int j=0;j<n && pos<=i;j++) {
-            if (pos >= a[j] && pos<=b[j]) continue;  
+        for(int j=0;j<n && pos<=i;j++){
+            if(pos >= a[j] && pos<=b[j]) continue;  
             int r=i- pos + 1;
-            if (r >= c[j] && r <= d[j]) continue;   
+            if(r >= c[j] && r <= d[j]) continue;   
             pos++;                                     
         }
         if(pos == i+1){ 
