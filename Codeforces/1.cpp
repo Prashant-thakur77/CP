@@ -18,8 +18,10 @@ const int MOD = 1e9 + 7;
 
 void solve() {
     string s;
+    cout<<"Enter the string: ";
     getline(cin,s);
     string word;
+    cout<<"enter the subsequene to find in the above string: ";
     cin>>word;
     int cnt=0;
     int ind=-1;
