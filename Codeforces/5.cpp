@@ -26,7 +26,6 @@ void solve() {
     for(int i=0;i<n;i++){
         cin>>b[i];
     }
-
     ll sum=0;
     for(int i=0;i<n;i++)sum+=max(a[i],b[i]);
     ll ans=0;
